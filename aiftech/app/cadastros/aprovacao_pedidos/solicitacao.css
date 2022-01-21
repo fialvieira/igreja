@@ -1,0 +1,83 @@
+.campos textarea {
+    height: 6rem;
+    font-size: 14px;
+}
+
+#ctn_itens .campo > * {
+    display: flex;
+    flex-flow: column;
+}
+
+#ctn_itens .campo.erro {
+    text-align: left;
+}
+
+#ctn_itens label {
+    font-weight: normal;
+}
+
+div.margem-superior {
+    margin-top: 0.4rem;
+}
+
+.verde {
+    background-color: green;
+}
+
+.verde:active, .verde:hover {
+    background-color: darkgreen;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.vermelho:active, .vermelho:hover {
+    background-color: darkred;
+}
+
+@media (min-width: 768px) {
+    .campos textarea {
+        height: 25vh;
+        width: 50vw;
+    }
+
+    #ctn_itens .campo > * {
+        display: inline-flex;
+        flex-flow: row-reverse;
+    }
+
+    #ctn_itens label {
+        flex: 1 0 auto;
+        font-weight: normal;
+    }
+
+    .campos .campo .controle a.acao {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_assuntos,
+    #ctn_participantes,
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    .mensagem {
+        align-self: center;
+    }
+
+    .campos .campo .controle a.acao {
+        height: 1.5rem;
+        width: 1.5rem;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    div.orcamento {
+        float: left;
+    }
+}

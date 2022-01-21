@@ -1,0 +1,31 @@
+#ctn_departamentos {
+    margin-bottom: 1rem;
+}
+
+.a_cargo_dep {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.a_cargo_dep label {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.a_cargo_dep a {
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .a_cargo_dep label {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_departamentos {
+        margin-bottom: 0.5rem;
+    }
+}

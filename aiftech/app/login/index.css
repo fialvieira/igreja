@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    .modal {
+        width: 33%;
+    }
+
+    .modal > header {
+        flex: 0 0 auto;
+        display: flex;
+        width: auto;
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .modal > section > div.card input {
+        width: 300px;
+    }
+
+    #senha {
+        width: auto;
+    }
+
+    #j_reset_senha {
+        width: 35%;
+    }
+
+    #j_cadastro_usuario {
+        width: 40%;
+    }
+}

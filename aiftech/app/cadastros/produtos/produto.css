@@ -1,0 +1,19 @@
+#ctn_fornecedor {
+    margin-bottom: 1rem;
+}
+
+.a_fornecedor {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.a_fornecedor label {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.a_fornecedor a {
+    margin-right: auto;
+}

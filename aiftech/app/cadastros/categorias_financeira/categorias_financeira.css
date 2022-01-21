@@ -1,0 +1,28 @@
+.oculto,
+.campos .oculto {
+    display: none;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+#ctn_conta_bancaria {
+    margin-bottom: 1rem;
+}
+
+.a_conta_bancaria {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.a_conta_bancaria label {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.a_conta_bancaria a {
+    margin-right: auto;
+}

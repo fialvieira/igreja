@@ -1,0 +1,42 @@
+.vermelho {
+    color: lightcoral;
+}
+
+td.acoes div a.seleciona, 
+td.acoes div a.seleciona_des {
+  background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/seleciona.svg);
+}
+
+td.acoes div a.selecionado {
+  background-color: darkseagreen;
+}
+
+td.acoes div a.seleciona_des {
+  background-color: #BBB;
+}
+
+td.acoes div a.seleciona_remove {
+  background: none;
+}
+
+td.acoes div a.selecionado:hover {
+  background-color: mediumseagreen;
+}
+
+#tabelas table th a{
+    cursor: default;
+}
+
+@media (min-width: 1024px) {
+  #servico table,
+  #pecas table,
+  #pecas_geral table {
+    margin: 5px 0;
+  }
+  #pecas_geral td.acoes {
+    height: auto;
+  }
+  .grid tr td[data-titulo="Seleciona"] div a {
+    margin: 0 auto;
+  }
+}

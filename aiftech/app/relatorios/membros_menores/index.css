@@ -1,0 +1,6 @@
+@media (min-width: 768px){
+    .campos-horizontais .botao {
+        margin-right: 0.4rem;
+        align-self: auto;
+    }
+}

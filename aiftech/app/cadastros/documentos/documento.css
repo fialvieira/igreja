@@ -1,0 +1,109 @@
+#ctn_arquivos {
+    margin-bottom: 1rem;
+}
+
+.a_arquivo {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.campos .campo a.acao {
+    margin-right: auto;
+}
+
+.campos .campo a:not(.acao) {
+    flex: 1 1 auto;
+    cursor: default;
+    align-self: center;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.excluido,
+.a_arquivo.oculto,
+.campos .oculto {
+    display: none;
+}
+
+.a_arquivo a:not(.acao) {
+    color: cornflowerblue;
+    font-style: normal;
+}
+
+/*.combo {
+    position: fixed;
+    z-index: 2;
+    background: white;
+    border: 1px solid #333;
+    display: none;
+    max-height: calc((100vh / 2) - 3.5rem);
+}
+
+.combo.aberto {
+    display: flex;
+}
+
+.combo > div {
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.combo table tr {
+    padding: 0.7rem;
+}
+
+.combo table tr td{
+    margin: 0;
+}*/
+
+.a_membro {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+}
+
+.campos .campo .a_membro a:not(.excluir) {
+    font-weight: normal;
+}
+
+@media (min-width: 768px) {
+    .campos textarea {
+        height: 10rem;
+        width: 50vw;
+    }
+
+    .campos .campo a:not(.acao) {
+        margin-left: 0;
+        padding-left: 0.5rem;
+    }
+
+    .campos .campo .a_membro a:not(.excluir) {
+        padding-left: 0.3rem;        
+    }
+
+/*    .combo {
+        width: auto;
+    }  
+
+    .combo table {
+        width: 100%;
+    }*/
+}
+@media (min-width: 1024px) {
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    .campos .campo label.file {
+        min-height: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+    .campos .campo .a_membro a:not(.excluir) {
+        padding-left: 0.5rem;        
+    }
+    
+}

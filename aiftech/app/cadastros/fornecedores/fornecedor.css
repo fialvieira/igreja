@@ -1,0 +1,18 @@
+.carregando {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    .carregando {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #cep, #msg {
+        display: inline-block;
+    }
+
+    #msg {
+        vertical-align: bottom;
+    }
+}

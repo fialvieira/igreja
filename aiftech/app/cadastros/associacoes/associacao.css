@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+  /*.campos input[type=text], 
+  .campos input[type=password], 
+  .campos select{
+    width: 300px;
+    margin-bottom: 0.25rem;
+  }*/
+  /*.campos textarea{
+    width: 300px;
+    height: 5rem;
+  }*/
+  /*.rotulo {
+    vertical-align: top;
+  }*/
+}

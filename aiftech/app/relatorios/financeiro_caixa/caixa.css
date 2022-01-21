@@ -1,0 +1,125 @@
+table.header {
+    width: 100%;
+}
+
+table.header tr td {
+    font-size: 24px;
+    text-align: center;
+}
+
+span.menor {
+    font-size: 20px;
+    text-align: center;
+}
+
+section {
+    width: 100%;
+}
+
+section.corpo {
+    margin-top: 15mm;
+}
+
+section.corpo div.subtitulo {
+    text-align: center;
+    font-size: 18px;
+}
+
+section.corpo div.tabela {
+    margin-top: 5mm;
+    text-align: center;
+}
+
+section.corpo div.tabela table {
+    width: 100%;
+    page-break-inside: auto;
+}
+
+section.corpo div.tabela table tr th {
+    background-color: darkgray;
+    text-align: center;
+}
+
+section.corpo div.tabela table tr td.cinza{
+    background-color: lightgray;
+}
+
+table.tabela_financeira tr td.top {
+    border-top: 1px solid #222222;
+}
+
+table td.numero, table th.numero {
+    text-align: right;
+}
+
+table td.centro{
+    text-align: center;
+}
+
+table td.negrito, table th.negrito {
+    font-weight: bold;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+/*TABLE*/
+table.tabela_financeira {
+    display: table;
+}
+
+/*table.tabela_financeira thead {
+    display: table-header-group;
+}*/
+
+table.tabela_financeira {
+    display: table-row-group;
+}
+
+table.tabela_financeira tr {
+    display: table-row;
+    border-bottom: none;
+    padding: 0;
+}
+
+table.tabela_financeira th {
+    display: table-row;
+    text-align: left;
+    border-top: 1px solid #222222;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+}
+
+table.tabela_financeira tr th,
+table.tabela_financeira tr td {
+    display: table-cell;
+    padding: 1rem 1rem;
+}
+
+table.tabela_financeira td {
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+    margin-bottom: 0;
+}
+
+table.tabela_financeira tr td.numero, table.tabela_financeira tr th.numero{
+    width: 45mm;
+    height: 3rem;
+}
+
+table.tabela_financeira tr td.direita{
+    text-align: right;
+}
+
+span.centro{
+    text-decoration: underline;
+    font-weight: bold;
+}

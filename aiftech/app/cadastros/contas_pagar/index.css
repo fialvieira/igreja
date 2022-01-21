@@ -1,0 +1,56 @@
+#ctn_totalizador {
+    width: 100%;
+    text-align: center;
+}
+
+#total_registros {
+    font-size: 1rem;
+}
+
+.sem_registro {
+    text-align: center;
+}
+
+.direita {
+    text-align: left;
+}
+
+.centro {
+    text-align: left;
+}
+
+tbody tr td.acoes div a.positivo_des:hover, tbody tr td.acoes div a.negativo_des:hover {
+    cursor: default;
+}
+
+@media (min-width: 768px) {
+    .campos select {
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.modal table thead tr th {
+        border-left: 0;
+    }
+
+    #ctn_totalizador {
+        margin-bottom: 5px;
+    }
+
+    #total_registros {
+        margin-right: 2px;
+    }
+
+    .direita {
+        text-align: right;
+    }
+
+    .centro {
+        text-align: center;
+    }
+
+    td.td_descricao {
+        max-width: 40vw;
+    }
+}

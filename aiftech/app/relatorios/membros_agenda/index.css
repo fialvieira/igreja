@@ -1,0 +1,32 @@
+#ctn_totalizador {
+    width: 100%;
+    text-align: center;
+}
+
+#total_registros {
+    font-size: 1rem;
+}
+
+.sem_registro {
+    text-align: center;
+}
+
+#campo_ft {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container-grid {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_totalizador {
+        margin-bottom: 5px;
+    }
+
+    #total_registros {
+        margin-right: 2px;
+    }
+}

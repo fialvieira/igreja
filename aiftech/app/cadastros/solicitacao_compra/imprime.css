@@ -1,0 +1,22 @@
+section{
+  width: 100%;
+  margin-top: 20mm;
+}
+
+section div {
+  text-align: justify; 
+  font-family: Arial; 
+  font-size: 12px;
+}
+
+section table{
+  width: 100%;
+  text-align: center; 
+  font-family:arial; 
+  font-size: 10px;
+}
+
+table tr td {
+  width: 50%;
+}
+

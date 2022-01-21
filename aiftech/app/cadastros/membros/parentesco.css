@@ -1,0 +1,180 @@
+.container > div {
+    width: 100%;
+}
+
+#ctn_parentesco {
+    margin-bottom: 1rem;
+}
+
+.a_parentesco {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.a_parentesco label {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.a_parentesco a {
+    margin-right: auto;
+}
+
+.carregando {
+    margin-left: 0;
+}
+
+.campos .campo a.acao {
+    margin-right: auto;
+}
+
+.campos .campo div.controle a:not(.acao) {
+    flex: 1 1 auto;
+    cursor: default;
+    align-self: center;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.campos .campo table tbody tr td.acoes div a.ligado, .campos .campo table tbody tr td.acoes div a.desligado {
+    flex: inherit;
+}
+
+.excluido,
+.a_arquivo.oculto {
+    display: none;
+}
+
+.a_arquivo a:not(.acao) {
+    color: cornflowerblue;
+    font-style: normal;
+}
+
+.legenda {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 0.5rem;
+}
+
+.legenda span {
+    display: block;
+}
+
+.campo.oculto {
+    display: none;
+}
+
+#ctn_parentesco table.mostra {
+    display: block;
+}
+
+#ctn_parentesco table.esconde {
+    display: none;
+}
+
+.combo {
+    position: fixed;
+    z-index: 2;
+    background: white;
+    border: 1px solid #333;
+    display: none;
+    max-height: calc((100vh / 2) - 3.5rem);
+}
+
+.combo.aberto {
+    display: flex;
+}
+
+.combo > div {
+    flex: 1 1 auto;
+    overflow: auto;
+    /*margin-top: 0.5rem;*/
+}
+
+.combo table tr {
+    padding: 0.7rem;
+}
+
+.combo table tr td{
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card{
+        width: 45vw;
+    }
+    .combo {
+        width: auto;
+    }
+
+    .combo table {
+        width: 100%;
+    }
+    .campos select {
+        width: auto;
+    }
+
+    .campos .campo a:not(.acao) {
+        margin-left: 0;
+        padding-left: 0.5rem;
+    }
+
+    .legenda {
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: center;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    .carregando {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .a_parentesco label {
+        margin-left: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .container > div {
+        width: 50%;
+        min-width: 550px;
+        max-width: 35%;
+    }
+}
+
+@media (min-width: 768px){
+    .card {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_parentesco {
+        margin-bottom: 0.5rem;
+    }
+
+    .card {
+        height: calc(100% - 2rem);
+    }
+
+    .campos .campo a:not(.acao) {
+        margin-top: 0;
+    }
+
+    .container > div {
+        width: 50%;
+        min-width: 510px;
+        max-width: 90%;
+    }
+
+    #ctn_parentesco {
+        margin-bottom: 10px;
+    }
+}

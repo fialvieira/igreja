@@ -1,0 +1,109 @@
+.campos textarea {
+    height: 6rem;
+    font-size: 14px;
+}
+
+/*#ctn_arquivos {
+    margin-bottom: 1rem;
+}*/
+
+/*.a_arquivo {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}*/
+
+/*.campos .campo a {
+    margin-right: auto;
+}
+
+.campos .campo a:not(.acao) {
+    flex: 1 1 auto;
+    cursor: default;
+    align-self: center;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}*/
+
+/*.excluido,
+.a_arquivo.oculto {
+    display: none;
+}*/
+
+/*.a_arquivo a:not(.acao) {
+    color: cornflowerblue;
+    font-style: normal;
+}*/
+
+#ctn_itens .campo > * {
+    display: flex;
+    flex-flow: column;
+}
+
+#ctn_itens .campo.erro {
+    text-align: left;
+}
+
+#ctn_itens label {
+    /*flex: 1 0 auto;*/
+    font-weight: normal;
+}
+
+@media (min-width: 768px) {
+    .campos textarea {
+        height: 25vh;
+        width: 50vw;
+    }
+
+    /*    .campos .campo a:not(.acao) {
+            margin-left: 0;
+            padding-left: 0.5rem;
+        }*/
+
+    #ctn_itens .campo > * {
+        display: inline-flex;
+        flex-flow: row-reverse;
+    }
+
+    #ctn_itens label {
+        flex: 1 0 auto;
+        /*display: inline-block;*/
+        font-weight: normal;
+    }
+    
+    .campos .campo .controle a.acao{
+        height: 2rem;
+        width: 2rem;
+        margin-left: 5px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #ctn_assuntos,
+    #ctn_participantes,
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    /*    .campos .campo label.file {
+            min-height: 0;
+            height: 1.5rem;
+            width: 1.5rem;
+        }*/
+    /*    #ctn_itens .campo > * {
+            display: inline-flex;
+        }*/
+
+    .mensagem {
+        align-self: center;
+    }
+
+    .campos .campo .controle a.acao{
+        height: 1.5rem;
+        width: 1.5rem;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}

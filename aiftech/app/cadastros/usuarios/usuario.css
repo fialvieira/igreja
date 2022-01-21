@@ -1,0 +1,12 @@
+.campos .campo.oculto,
+.oculto{
+  display: none;
+}
+@media (min-width: 768px) {
+  .campos input[type=text], .campos input[type=email], .campos input[type=password], .campos input[type=tel], .campos select{
+    width: 300px;
+  }
+  #sel_status{
+      width: auto;
+  }
+}

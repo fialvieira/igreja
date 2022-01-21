@@ -1,0 +1,16 @@
+.campos textarea{
+    height: 5rem;
+}
+h1 a{
+    text-decoration: underline;
+    cursor: default;
+}
+@media (min-width: 768px) {
+    .campos input[type=text], .campos input[type=password], .campos select{
+        width: 300px;
+    }
+    .campos textarea{
+        width: 500px;
+        height: 8rem;
+    }
+}

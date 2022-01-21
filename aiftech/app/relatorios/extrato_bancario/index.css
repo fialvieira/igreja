@@ -1,0 +1,35 @@
+.oculto {
+    display: none;
+}
+
+.direita {
+    text-align: left;
+}
+
+.azul {
+    color: lightskyblue;
+}
+
+.vermelho {
+    color: red;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .campos input[type=text], 
+    .campos input[type=email], 
+    .campos input[type=password], 
+    .campos input[type=search], 
+    .campos select, 
+    .campos textarea {
+        width: auto;
+    }
+
+    .direita {
+        text-align: right;
+    }
+
+}

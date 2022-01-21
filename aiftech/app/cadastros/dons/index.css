@@ -1,0 +1,38 @@
+#ctn_totalizador {
+    width: 100%;
+    text-align: center;
+}
+
+#total_registros {
+    font-size: 1rem;
+}
+
+.sem_registro {
+    text-align: center;
+}
+
+.direita {
+    text-align: right;
+}
+
+.centro {
+    text-align: center;
+}
+
+@media (min-width: 768px){
+
+    .coluna_descricao{
+        width: 79%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_totalizador {
+        /*text-align: right;*/
+        margin-bottom: 5px;
+    }
+
+    #total_registros {
+        margin-right: 2px;
+    }
+}

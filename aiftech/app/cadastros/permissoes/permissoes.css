@@ -1,0 +1,22 @@
+.campos label.menu {
+    margin-top: 7px;
+}
+
+.campo .submenu {
+    width: 95%;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .campos label.menu {
+        margin-top: 0;
+        text-align: left;
+    }    
+    .campo .submenu {
+        width: auto;
+        margin-left: 0;
+    }
+    .submenu label {
+        font-size: 0.9rem; 
+    }
+}

@@ -1,0 +1,62 @@
+table.header{
+    width: 100%;
+}
+
+table.header tr td{
+    font-size: 24px;
+    text-align: center;
+}
+
+span.menor{
+    font-size: 20px;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+}
+
+section.corpo{
+    margin-top: 15mm;
+}
+
+section.corpo div.subtitulo{
+    text-align: center;
+    font-size: 18px;
+}
+
+section.corpo div.tabela {
+    margin-top: 5mm;
+    text-align: left;
+}
+
+section.corpo div.tabela table{
+    width: 100%;
+    page-break-inside: auto;
+}
+
+section.corpo div.tabela table thead tr th{
+    background-color: lightgray;
+    text-align: left;
+}
+
+table tbody td.numero, table thead th.numero{
+    text-align: right;
+}
+
+table tbody td.negrito, table thead th.negrito{
+    font-weight: bold;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+div.observacao{
+    margin-top: 40mm;
+    width: 100%;
+}

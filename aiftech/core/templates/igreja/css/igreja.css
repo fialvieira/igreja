@@ -1,0 +1,1824 @@
+object {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial;
+    background: #eaeef0;
+}
+
+header {
+    height: 3.5rem;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    background: #eaeef0;
+    z-index: 5;
+    border-bottom: 1px solid #aaa;
+}
+
+header #logo {
+    height: calc(3.5rem - 1px);
+    flex: 0 0 3.5rem;
+    /*background: white;*/
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/favico.ico") center no-repeat #eaeef0;
+    background-size: contain;
+    margin-right: auto;
+}
+
+header #mais {
+    height: 3.5rem;
+    flex: 0 0 3.5rem;
+    /*background: white;*/
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/mais.svg") center no-repeat;
+    background-size: 80% 80%;
+}
+
+header #hamburguer {
+    height: 3.5rem;
+    flex: 0 0 3.5rem;
+    /*background: white;*/
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/menu.svg") center no-repeat;
+    background-size: 80% 80%;
+    /*margin-left: auto;*/
+}
+
+header #hamburguer.aberto {
+    background-image: url("/projeto_igreja/aiftech/core/templates/igreja/img/close.svg");
+}
+
+header menu {
+    height: 3.5rem;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    background: #003449;
+    font-size: 0.9rem;
+    position: fixed;
+    display: none;
+    height: auto;
+    top: 3.5rem;
+    right: 0;
+    width: 100vw;
+    z-index: 10;
+    max-height: calc(100vh - 3.5rem);
+    overflow: auto;
+}
+
+header div#usuario {
+    height: 3.5rem;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    background: #003449;
+    font-size: 0.9rem;
+    position: fixed;
+    display: none;
+    height: auto;
+    top: 3.5rem;
+    right: 0;
+    width: 100vw;
+    z-index: 10;
+    max-height: calc(100vh - 3.5rem);
+    overflow: auto;
+}
+
+header menu.aberto,
+header div#usuario.aberto {
+    display: flex;
+}
+
+header menu > .submenu {
+    display: none;
+    padding: 0 0.5rem;
+}
+
+header menu > .submenu.aberto {
+    display: block;
+}
+
+header menu a,
+header div#usuario a {
+    text-decoration: none;
+    color: #dcf1f3;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    display: block;
+}
+
+header menu a[href],
+header div#usuario a[href] {
+    cursor: pointer;
+}
+
+header menu a:hover,
+header div#usuario a:hover {
+    color: #9be595;
+}
+
+main {
+    margin-top: 3.5rem;
+    min-height: calc(100vh - 3.5rem - 2rem);
+}
+
+footer {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+h1 {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    display: flex;
+}
+
+h1 div:not(#info) {
+    margin-right: auto;
+}
+
+h1 a:not(.info) {
+    color: steelblue;
+    cursor: default;
+}
+
+div#info {
+    height: 2.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    /*  margin-top: 2px;
+      margin-right: 2px;*/
+    /*  width: 100%;
+      height: 100%;  */
+}
+
+div#info a {
+    height: 2.5rem;
+    width: 2.5rem;
+    flex: 0 0 2.5rem;
+    /*background: #2981bf;*/
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: 75% 75%;*/
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+div#info a:hover {
+    background-color: #FFFFFF;
+    /*background-color: #1f6bb3;*/
+}
+
+div#info a.info {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/info.svg);
+    background-size: 100% 100%;
+}
+
+.container-grid {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container-grid > .grid {
+    overflow: auto;
+    flex: 1 1 auto;
+    margin: 0 0.5rem;
+}
+
+.container-grid > .qbe {
+    flex: 0 0 auto;
+    justify-content: center;
+}
+
+.container-grid a.novo {
+    height: 2.5rem;
+    width: 2.5rem;
+    /*flex: 0 0 2.5rem;*/
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    background: #2981bf;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/add.svg);
+    /*margin: 1px;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.container-grid a.novo:hover {
+    background-color: #1f6bb3;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.container > div {
+    flex: 1 1 auto;
+}
+
+.botoes {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.botoes .botao {
+    margin-bottom: 1px;
+}
+
+.botao {
+    display: block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    background: #084f7c;
+    color: white;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #0a6096;
+}
+
+.botao:active {
+    background-color: #064063;
+}
+
+.botao[href] {
+    cursor: pointer;
+}
+
+input {
+    padding: 0 0.4rem;
+}
+
+.campos input[type=text],
+.campos input[type=date],
+.campos input[type=datetime-local],
+.campos input[type=email],
+.campos input[type=password],
+.campos input[type=search],
+.campos input[type=tel],
+.campos select,
+.campos textarea {
+    outline: none;
+    background: white;
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.075);
+    transition: border linear .4s, box-shadow linear .4s;
+}
+
+.campos input[type=text]:focus,
+.campos input[type=date]:focus,
+.campos input[type=datetime-local]:focus,
+.campos input[type=email]:focus,
+.campos input[type=password]:focus,
+.campos input[type=search]:focus,
+.campos input[type=tel]:focus,
+.campos select:focus,
+.campos textarea:focus {
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear .3s, box-shadow linear .3s;
+    -moz-transition: border linear .3s, box-shadow linear .3s;
+    -o-transition: border linear .3s, box-shadow linear .3s;
+    transition: border linear .3s, box-shadow linear .3s;
+    border-color: #74b9ef;
+}
+
+.campos input[type=text].data {
+    text-align: center;
+}
+
+.campos .campo .controle a.acao {
+    height: 2.5rem;
+    width: 2.5rem;
+    flex: 0 0 2.5rem;
+    background: #2981bf;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    /*margin: 0;*/
+    /*padding-left: 3px;*/
+}
+
+.campos input:required, .campos select:required, .campos textarea:required {
+    border-color: gold;
+}
+
+.campos .campo .controle a.acao:hover {
+    background-color: #1f6bb3;
+}
+
+.campos .campo .controle a.incluir {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/add.svg);
+}
+
+.campos .campo .controle a.limpar {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/backspace.svg);
+}
+
+.campos .campo .controle a.excluir,
+.campos .campo .controle a.delete,
+.campos .campo .controle a.del {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/delete.svg);
+    background-color: #c70101;
+}
+
+.campos .campo .controle a.excluir:hover,
+.campos .campo .controle a.delete:hover,
+.campos .campo .controle a.del:hover {
+    background-color: #8f0101;
+}
+
+.campos .campo .mensagem {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.campos .campo.erro input[type=text],
+.campos .campo.erro input[type=date],
+.campos .campo.erro input[type=datetime-local],
+.campos .campo.erro input[type=email],
+.campos .campo.erro input[type=password],
+.campos .campo.erro input[type=search],
+.campos .campo.erro input[type=tel],
+.campos .campo.erro select,
+.campos .campo.erro textarea {
+    border: 1px solid #ba534c;
+    background: #f2dede;
+}
+
+.campos .campo.erro .mensagem {
+    color: #ba534c;
+}
+
+td.controle.erro .mensagem {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+td.controle.erro input[type=text],
+td.controle.erro input[type=date],
+td.controle.erro input[type=datetime-local],
+td.controle.erro input[type=email],
+td.controle.erro input[type=password],
+td.controle.erro input[type=search],
+td.controle.erro input[type=tel],
+td.controle.erro select,
+td.controle.erro textarea {
+    border: 1px solid #ba534c;
+    background: #f2dede;
+}
+
+td.controle.erro .mensagem {
+    color: #ba534c;
+}
+
+.campos .campo.nao-preenchido input[type=text],
+.campos .campo.nao-preenchido input[type=date],
+.campos .campo.nao-preenchido input[type=datetime-local],
+.campos .campo.nao-preenchido input[type=email],
+.campos .campo.nao-preenchido input[type=password],
+.campos .campo.nao-preenchido input[type=search],
+.campos .campo.nao-preenchido input[type=tel],
+.campos .campo.nao-preenchido select,
+.campos .campo.nao-preenchido textarea {
+    border: 1px solid #f5cb76;
+    background: #faebcc;
+}
+
+.campos input[type=text],
+.campos input[type=date],
+.campos input[type=datetime-local],
+.campos input[type=email],
+.campos input[type=password],
+.campos input[type=search],
+.campos input[type=tel],
+.campos textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.campos input[type="file"], td.acoes div input[type="file"] {
+    display: none;
+}
+
+.campos .campo.nao-preenchido label.file,
+.campos .campo.nao-preenchido label.foto {
+    background-color: #ebccd1;
+}
+
+.campos .campo.nao-preenchido label.file:hover,
+.campos .campo.nao-preenchido label.foto:hover {
+    background-color: #ba534c;
+}
+
+label.file, label.foto {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #BBB;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+}
+
+label.file {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/file.svg);
+}
+
+label.foto {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/foto.svg);
+}
+
+label.file:hover, label.foto:hover {
+    background-color: #AAA;
+}
+
+a.search {
+    display: inline-block;
+    margin: 1px;
+    width: 20px;
+    height: 20px;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/search.svg) no-repeat center;
+}
+
+a.recolher {
+    display: inline-block;
+    margin: 1px;
+    width: 20px;
+    height: 20px;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-compress.svg) no-repeat center;
+}
+
+a.expandir {
+    display: inline-block;
+    margin: 1px;
+    width: 20px;
+    height: 20px;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-expand.svg) no-repeat center;
+}
+
+a.forward {
+    display: inline-block;
+    margin: 1px;
+    width: 20px;
+    height: 20px;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/forward.svg) no-repeat center;
+}
+
+a.rewind {
+    display: inline-block;
+    margin: 1px;
+    width: 20px;
+    height: 20px;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/rewind.svg) no-repeat center;
+}
+
+input.inteiro, input.real {
+    text-align: right;
+}
+
+.campos label {
+    display: block;
+    font-weight: bold;
+}
+
+.campos .campo,
+.campos-horizontais .botao {
+    margin-bottom: 0.4rem;
+}
+
+.qbe .campos-horizontais > .no-min {
+    display: none;
+}
+
+#vidro-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+}
+
+#vidro-modal.aberto {
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #333;
+    padding: 1rem;
+    display: none;
+    flex-flow: column nowrap;
+    box-shadow: 0 0 1rem black;
+    transition: 0.1s ease-in all;
+    width: calc(100vw - 2rem);
+    max-height: calc(100vh - 5rem);
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.modal > header {
+    flex: 0 0 auto;
+    display: flex;
+}
+
+.modal > section {
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-top: 0.5rem;
+}
+
+.modal > .botoes {
+    flex: 0 0 auto;
+    margin-top: 1rem;
+}
+
+.modal > header {
+    position: relative;
+    width: auto;
+    margin-top: -16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    flex-flow: row nowrap;
+    background: #eaeef0;
+    z-index: 5;
+    border-bottom: 1px solid #aaa;
+    height: 1.5rem;
+}
+
+.modal > header > h2 {
+    flex: 1 1 auto;
+    font-size: 1rem;
+}
+
+.modal > header > .fechar {
+    flex: 0 0 18px;
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/close.svg") no-repeat center top;
+    background-size: contain;
+    margin-left: 18px;
+}
+
+#alerta {
+    position: fixed;
+    z-index: 3;
+    top: 3.5rem;
+    padding: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid whitesmoke;
+    width: calc(100vw - 2rem);
+    min-width: 300px;
+    text-align: center;
+    display: none;
+    font-size: 1rem;
+}
+
+#alerta.aberto {
+    display: flex;
+}
+
+#alerta > div {
+    flex: 1 1 auto;
+}
+
+#alerta > a {
+    flex: 0 0 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+}
+
+#alerta.info {
+    border: 1px solid #bce8f1;
+    color: #31708f;
+    background: #d9edf7;
+}
+
+#alerta.sucesso {
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    background: #dff0d8;
+}
+
+#alerta.erro {
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    background: #f2dede;
+}
+
+#alerta.erro > a {
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/alerta-close-erro.svg") no-repeat center;
+}
+
+#alerta.info > a {
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/alerta-close-info.svg") no-repeat center;
+}
+
+#alerta.sucesso > a {
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/alerta-close-sucesso.svg") no-repeat center;
+}
+
+#alerta > a:hover {
+    background: url("/projeto_igreja/aiftech/core/templates/igreja/img/close.svg") no-repeat center;
+}
+
+.carregando {
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+    background: url(/projeto_igreja/aiftech/core/templates/igreja/img/loading.svg) center no-repeat;
+    animation: rotacao-loading 1s infinite;
+    animation-timing-function: ease;
+}
+
+table {
+    width: 100%;
+    display: block;
+    background-color: white;
+}
+
+thead {
+    display: none;
+}
+
+tbody {
+    display: block;
+}
+
+tr {
+    display: block;
+    border-bottom: 1px solid #cccccc;
+    padding: 1rem;
+}
+
+tr.oculto {
+    display: none;
+}
+
+th, td {
+    display: block;
+}
+
+td {
+    margin-bottom: 0.5rem;
+}
+
+td:before {
+    content: attr(data-titulo);
+    font-weight: bold;
+    display: block;
+}
+
+td.acoes {
+    height: 2.5rem;
+}
+
+td.acoes div {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+}
+
+td.acoes div a {
+    height: 2.5rem;
+    width: 2.5rem;
+    flex: 0 0 2.5rem;
+    background: #2981bf;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+td.acoes div a.des {
+    background-color: darkgray;
+}
+
+td.acoes div a:hover {
+    background-color: #1f6bb3;
+}
+
+td.acoes div a.ligado:hover {
+    background-color: #92a959;
+}
+
+td.acoes div a.desligado:hover {
+    background-color: #808080;
+}
+
+td.acoes div a.ligado {
+    background: #abcb57;
+    background-size: 100%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/power-settings.svg);
+}
+
+td.acoes div a.desligado {
+    background-color: #a0a0a0;
+    background-size: 100%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/power-settings.svg);
+}
+
+td.acoes div a.alterar {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/edit.svg);
+}
+
+td.acoes div a.file {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/file.svg);
+}
+
+td.acoes div a.download {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/download.svg);
+}
+
+td.acoes div a.seleciona {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/seleciona.svg);
+}
+
+td.acoes div a.detalhe {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/detail.svg);
+}
+
+td.acoes div label.file {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/file.svg);
+}
+
+td.acoes div a.positivo {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_up.svg);
+}
+
+td.acoes div a.negativo {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_down.svg);
+}
+
+td.acoes div a.parentesco {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/face.svg);
+}
+
+td.acoes div a.movimentacao_membro {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/history.svg);
+}
+
+td.acoes div a.imprimir,
+td.acoes div a.print {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/print.svg);
+}
+
+td.acoes div a.excluir,
+td.acoes div a.delete,
+td.acoes div a.del {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/delete.svg);
+    background-color: #c70101;
+}
+
+td.acoes div a.excluir:hover {
+    /*background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/delete.svg);*/
+    background-color: #8f0101;
+}
+
+td.acoes div a.twitter {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/twitter.svg);
+}
+
+th.direita,
+td.direita {
+    text-align: left;
+}
+
+th.centro,
+td.centro {
+    text-align: left;
+}
+
+.card {
+    padding: 1rem;
+    background: #f1f1f1;
+    box-shadow: 0 0 0.25rem 0 #AAA;
+    margin: 0.5rem;
+}
+
+#vidro-flutuante {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.65;
+    display: none;
+}
+
+#vidro-flutuante {
+    z-index: 3;
+}
+
+body.flutuante-aberto #vidro-flutuante {
+    display: block;
+}
+
+.flutuante {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border: 1px solid #55a3ba;
+    top: 0rem;
+    left: 0rem;
+    z-index: 4;
+    background: #f2f2f2;
+    box-shadow: 0 0 1rem 0.2rem #dfdfdf;
+    display: none;
+    overflow: auto;
+}
+
+.flutuante.visivel {
+    display: block;
+}
+
+.calendario {
+    background: white;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 0 1rem #c8c8c8;
+}
+
+.calendario a {
+    color: #333333;
+    cursor: default;
+}
+
+.calendario > .painel-mes,
+.calendario > .painel-anos {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+.calendario > .painel-mes.oculto,
+.calendario > .painel-anos.oculto {
+    display: none;
+}
+
+.calendario > .painel-mes > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.28571428571429%;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calendario > .painel-mes > .dia {
+    font-size: 0.85rem;
+}
+
+.calendario > .painel-mes > a:hover {
+    background-color: #eeeeee;
+}
+
+.calendario > .painel-mes .mes-anterior {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-left.svg);
+}
+
+.calendario > .painel-mes .mes-seguinte {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-right.svg);
+}
+
+.calendario > .painel-mes .periodo {
+    width: 71.42857142857143%;
+    font-weight: bold;
+}
+
+.calendario > .painel-mes .dia-semana {
+    font-size: 0.9rem;
+}
+
+.calendario > .painel-mes .selecionado,
+.calendario > .painel-mes .selecionado:hover {
+    background: #337ab7;
+    color: white;
+}
+
+.calendario > .painel-mes .hoje,
+.calendario > .painel-mes .hoje:hover {
+    border: 1px solid #337ab7;
+}
+
+.calendario > .painel-mes .dia-fora {
+    color: #bbb;
+}
+
+.calendario > .painel-mes .limpar,
+.calendario > .painel-mes .cancelar {
+    width: 50%;
+}
+
+.calendario > .painel-anos {
+
+}
+
+.calendario > .painel-anos > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 16.66666666666667%;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.calendario > .painel-anos > a:hover {
+    background-color: #eeeeee;
+}
+
+.calendario > .painel-anos .anos-anteriores {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-left.svg);
+}
+
+.calendario > .painel-anos .voltar {
+    width: 60%;
+}
+
+.calendario > .painel-anos .anos-seguintes {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/arrow-right.svg);
+}
+
+.container-calendario {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+/*todo apontar imagens calendário corretamente*/
+
+section.abas {
+    background: white;
+}
+
+section.abas nav {
+    display: flex;
+    height: 2.5rem;
+}
+
+section.abas nav a {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+section.abas nav a.aberta,
+section.abas nav a.aberta:hover {
+    background: #337ab7;
+    color: white;
+}
+
+section.abas nav a:hover {
+    background: #eeeeee;
+}
+
+section.abas section {
+    padding: 1rem;
+}
+
+section.abas section > div {
+    display: none;
+}
+
+section.abas section > div.aberta {
+    display: block;
+}
+
+.erro {
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+.combo {
+    /*    position: fixed;
+        z-index: 2;
+        background: white;
+        border: 1px solid #333;
+        display: none;
+        max-height: calc((100vh / 2) - 3.5rem);*/
+    height: 80vh;
+    width: 90vw;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+/*.combo.aberto {
+    display: flex;
+}*/
+
+/*.combo > div {
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-top: 0.5rem;
+}*/
+
+.combo table tr {
+    padding: 0.7rem;
+}
+
+.combo table tr td {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    header menu {
+        width: calc(100vw / 2);
+    }
+
+    header div#usuario {
+        width: calc(100vw / 3);
+    }
+
+    .container-grid {
+        /*height: 100%;*/
+    }
+
+    .container-grid > .qbe {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .container-grid .qbe .botoes {
+        margin: 1px;
+        padding-top: 12px;
+        flex: 1 1 auto;
+    }
+
+    .container > div {
+        flex: 0 1 auto;
+    }
+
+    .botoes {
+        flex-flow: row wrap;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .botao {
+        padding: 0 1rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+    .botoes .botao {
+        margin: 1px;
+    }
+
+    .campos input,
+    .campos select {
+        margin-bottom: 0.25rem;
+    }
+
+    .campos input[type=text],
+    .campos input[type=email],
+    .campos input[type=password],
+    .campos input[type=search],
+        /*.campos input[type=tel],*/
+    .campos select,
+    .campos textarea {
+        /*width: auto;*/
+        width: 300px;
+    }
+
+    .campos input[type=text].inteiro,
+    .campos input[type=text].real {
+        width: 100px;
+    }
+
+    .campos input[type=text].data {
+        width: 100px;
+        text-align: center;
+    }
+
+    .campos input[type=email] {
+        width: 300px;
+    }
+
+    .campos input[type=text].cep {
+        width: 100px;
+    }
+
+    .campos input[type=tel],
+    .campos input[type=tel].telefone,
+    .campos input[type=text].telefone {
+        width: 120px;
+    }
+
+    .campos textarea {
+        height: 5rem;
+    }
+
+    .campos {
+        display: table-row-group;
+    }
+
+    .campos .campo {
+        display: table-row;
+    }
+
+    .campos .campo > * {
+        display: table-cell;
+    }
+
+    .campos .campo label {
+        min-height: 2rem;
+        line-height: 2rem;
+        text-align: right;
+        padding: 0 0.5rem;
+        white-space: nowrap;
+    }
+
+    .campos .campo label.botao {
+        text-align: center;
+    }
+
+    .campos .campo .controle a.acao {
+        display: inline-block;
+        /*vertical-align: middle;*/
+    }
+
+    .campos-horizontais {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .campos-horizontais .campo {
+        margin-right: 0.4rem;
+    }
+
+    .campos-horizontais .botao {
+        margin-right: 0.4rem;
+        /*align-self: center;*/
+    }
+
+    .qbe .campos-horizontais > .no-min {
+        display: block;
+    }
+
+    .qbe .campos-horizontais > .no-med {
+        display: none;
+    }
+
+    .modal {
+        width: auto;
+    }
+
+    .rotulo {
+        vertical-align: top;
+    }
+
+    #alerta {
+        width: auto;
+    }
+
+    table {
+        width: auto;
+    }
+
+    .container-calendario {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .erro {
+        text-align: left;
+    }
+
+    .combo {
+        width: auto;
+    }
+
+    .combo table {
+        width: 100%;
+    }
+
+    .container-grid > .grid {
+        overflow: unset;
+    }
+
+    th {
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        overflow: hidden;
+    }
+
+    header {
+        height: 2.5rem;
+    }
+
+    header #logo {
+        height: 2.5rem;
+        flex-basis: 2.5rem;
+    }
+
+    header #hamburguer,
+    header #mais {
+        display: none;
+    }
+
+    header menu,
+    header div#usuario {
+        height: 2.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        position: static;
+        overflow: hidden;
+    }
+
+    header div#usuario {
+        flex: 0 1 14rem;
+    }
+
+    header menu a {
+        padding: 0 1rem;
+        flex: 0 1 auto;
+        cursor: default;
+        text-align: left;
+    }
+
+    header div#usuario a {
+        padding: 0 1rem;
+        flex: 0 1 auto;
+        margin-left: auto;
+    }
+
+    header menu > .submenu {
+        padding: 0;
+        position: fixed;
+        top: 2.6rem;
+        background: #003449;
+        overflow: auto;
+        max-height: calc(100vh - 2.7rem)
+    }
+
+    main {
+        height: calc(100vh - 2.5rem - 2rem);
+        overflow: auto;
+        margin-top: 2.5rem;
+    }
+
+    footer {
+        line-height: 2rem;
+        height: 2rem;
+        padding: 0 1rem;
+        text-align: right;
+    }
+
+    .botao {
+        padding: 0 0.5rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+
+    }
+
+    h1 {
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+    div#info {
+        height: 2rem;
+    }
+
+    div#info a {
+        height: 2rem;
+        width: 2rem;
+        flex: 0 0 2rem;
+    }
+
+    .container-grid .qbe .botoes {
+        padding-top: 8px;
+    }
+
+    .container-grid .qbe .botoes .botao {
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+    .container-grid a.novo {
+        position: static;
+        /*    bottom: 0;
+            right: 0;*/
+        display: block;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        width: auto;
+        border-radius: inherit;
+        text-align: center;
+        background: #084f7c;
+        color: white;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-decoration: none;
+        margin-bottom: 0.4rem;
+        margin-right: 0.4rem;
+        padding: 0 0.5rem;
+        height: 1.75rem;
+        line-height: 1.75rem;
+        /*align-self: center;*/
+    }
+
+    .container-grid a.novo::after {
+        content: 'Novo';
+    }
+
+    .container-grid a.novo:hover {
+        background-color: #0a6096;
+    }
+
+    .container-grid a.novo:active {
+        background-color: #064063;
+    }
+
+    .container-grid a.novo[href] {
+        cursor: pointer;
+    }
+
+    .campos input[type=text],
+    .campos input[type=email],
+    .campos input[type=password],
+    .campos input[type=search],
+    .campos input[type=tel],
+    .campos select {
+        height: 1.75rem;
+    }
+
+    .campos .campo .controle a.acao {
+        height: 1.5rem;
+        width: 1.5rem;
+        flex: 0 0 1.5rem;
+    }
+
+    .qbe .campos-horizontais > .no-med {
+        display: block;
+    }
+
+    .no-max,
+    .qbe .campos-horizontais > .no-max {
+        display: none;
+    }
+
+    label.file,
+    label.foto {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    td.acoes div label.file {
+        height: 1.5rem;
+        width: 1.5rem;
+        flex: 0 0 1.5rem;
+    }
+
+    table {
+        display: table;
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tbody {
+        display: table-row-group;
+    }
+
+    tr {
+        display: table-row;
+        border-bottom: none;
+        padding: 0;
+    }
+
+    th {
+        display: table-row;
+        text-align: left;
+        background: #006698;
+        color: white;
+        border-top: 1px solid #222222;
+    }
+
+    th:first-child {
+        border-left: 1px solid #222222;
+    }
+
+    th:last-child {
+        border-right: 1px solid #222222;
+    }
+
+    th,
+    td {
+        display: table-cell;
+        padding: 0.25rem 0.35rem;
+    }
+
+    td {
+        border-bottom: 1px solid #cccccc;
+        cursor: default;
+        margin-bottom: 0;
+    }
+
+    td:before {
+        display: none;
+    }
+
+    td.acoes {
+        height: auto;
+        /*padding: 0;*/
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    td.acoes div {
+        justify-content: flex-end;
+    }
+
+    td.acoes div a {
+        height: 1.5rem;
+        width: 1.5rem;
+        flex: 0 0 1.5rem;
+    }
+
+    td:first-child {
+        border-left: 1px solid #cccccc;
+    }
+
+    td:last-child {
+        border-right: 1px solid #cccccc;
+    }
+
+    tr:hover td {
+        background: #ffffdd;
+    }
+
+    th.direita,
+    td.direita {
+        text-align: right;
+    }
+
+    th.centro,
+    td.centro {
+        text-align: center;
+    }
+
+    .flutuante {
+        transform: none;
+    }
+
+    .container-calendario {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 0 1rem #666;
+    }
+
+    section.abas nav a {
+        white-space: nowrap;
+        flex-basis: 1;
+        flex-grow: 0;
+        padding: 0 1rem;
+    }
+
+    section.abas.ie nav a {
+        flex-grow: 1;
+    }
+
+    .texto-longo-uma-linha {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    #alerta {
+        top: 2.5rem;
+    }
+
+    .combo {
+        height: auto;
+    }
+}
+
+@keyframes rotacao-loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (orientation: portrait) {
+
+    .container-calendario {
+        height: 50vh;
+    }
+}
+
+footer.opcoes .botoes a {
+    height: 2.5rem;
+    width: 2.5rem;
+    flex: 0 0 2.5rem;
+    background: #2981bf;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+}
+
+footer.opcoes .botoes a:hover {
+    background-color: #1f6bb3;
+}
+
+footer.opcoes .botoes a.incluir {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/add.svg);
+}
+
+footer.opcoes .botoes a.alterar {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/edit.svg);
+}
+
+footer.opcoes .botoes a.file {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/file.svg);
+}
+
+footer.opcoes .botoes a.confirmar {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/confirma.svg);
+}
+
+footer.opcoes .botoes a.cancelar {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/cancel.svg);
+}
+
+footer.opcoes .botoes a.sair {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/keyboard-backspace.svg);
+}
+
+footer.opcoes .botoes a.ficha {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/ficha.svg);
+}
+
+footer.opcoes .botoes a.excluir,
+footer.opcoes .botoes a.delete,
+footer.opcoes .botoes a.del {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/delete.svg);
+    background-color: #c70101;
+}
+
+footer.opcoes .botoes a.excluir:hover {
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/delete.svg);
+    background-color: #8f0101;
+}
+
+td.acoes div a.positivo {
+    background: green;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_up.svg);
+}
+
+td.acoes div a.positivo:hover, td.acoes div a.positivo_des {
+    background: darkgreen;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_up.svg);
+}
+
+td.acoes div a.negativo {
+    background: red;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_down.svg);
+}
+
+td.acoes div a.negativo:hover, td.acoes div a.negativo_des {
+    background: darkred;
+    margin: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    border-radius: 50%;
+    background-image: url(/projeto_igreja/aiftech/core/templates/igreja/img/thumb_down.svg);
+}
+
+/*****************Estilos Drag and Drop*********************/
+#filedrag {
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0;
+    color: #555;
+    border: 2px dashed #555;
+    border-radius: 7px;
+    cursor: default;
+}
+
+#filedrag.hover {
+    color: #f00;
+    border-color: #f00;
+    border-style: solid;
+    box-shadow: inset 0 3px 4px #888;
+}
+
+#fileselect {
+    display: none;
+}
+
+fieldset > div {
+    padding: 3px 10px 3px 10px;
+}
+
+#above_message {
+    display: none;
+}
+
+#progress {
+    display: none;
+}
+
+#progress p {
+    display: block;
+    height: 20px;
+    width: 5%;
+    padding: 2px 5px;
+    margin: 2px 0;
+    border: 1px inset #446;
+    border-radius: 5px;
+    background: #0c0 none 0 0 no-repeat;
+}
+
+#progress p.success {
+    background: #0c0 none 0 0 no-repeat;
+}
+
+#progress p.failed {
+    background: #c00 none 0 0 no-repeat;
+}
+
+/********************Estilos para novo menu multi-nível***********************/
+header menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #1bc2a2;
+}
+
+header menu ul li {
+    display: block;
+    position: relative;
+    float: left;
+
+}
+
+/* This hides the dropdowns */
+header menu li {
+    list-style-type: none;
+}
+
+header menu li ul {
+    display: none;
+}
+
+header li a {
+    display: initial;
+}
+
+header menu ul li a {
+    text-decoration: none;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    display: block;
+    background-color: #003449;
+}
+
+header menu ul li a:hover {
+    color: #9be595;
+}
+
+/* Display the dropdown */
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover li {
+    float: none;
+    color: #dcf1f3;
+}
+
+li:hover a {
+    color: #dcf1f3;
+}
+
+li:hover li a:hover {
+    color: #9be595;
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+
+/* Displays second level dropdowns to the right of the first level dropdown */
+
+header menu ul ul {
+    left: 100%;
+    top: 0;
+}
+
+/* Simple clearfix */
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after {
+    clear: both;
+}

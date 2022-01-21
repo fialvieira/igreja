@@ -1,0 +1,62 @@
+#ctn_totalizador {
+    width: 100%;
+    text-align: center;
+}
+
+#total_registros {
+    font-size: 1rem;
+}
+
+.sem_registro {
+    text-align: center;
+}
+
+.direita {
+    text-align: right;
+}
+
+.centro {
+    text-align: center;
+}
+
+.imagem {
+    width: 40%;
+    height: 40%;
+    padding-left: 5px;
+}
+
+@media (min-width: 768px) {
+    #detalhes_grid table tbody tr td.det_foto {
+        width: 95px;
+        height: 130px;
+    }
+
+    .imagem {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10px;
+        padding-left: 5px;
+    }
+
+    #detalhes_grid > table {
+        width: 90vw;
+    }
+
+    #sel_status {
+        width: auto;
+    }
+
+    th:last-child {
+        min-width: 7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #ctn_totalizador {
+        margin-bottom: 5px;
+    }
+
+    #total_registros {
+        margin-right: 2px;
+    }
+}

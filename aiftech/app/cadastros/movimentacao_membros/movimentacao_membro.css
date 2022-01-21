@@ -1,0 +1,48 @@
+#ctn_arquivos {
+    margin-bottom: 1rem;
+}
+
+.a_arquivo {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.campos .campo a.acao {
+    margin-right: auto;
+}
+
+.campos .campo a:not(.acao) {
+    flex: 1 1 auto;
+    cursor: default;
+    align-self: center;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.excluido,
+.a_arquivo.oculto {
+    display: none;
+}
+
+.a_arquivo a:not(.acao) {
+    color: cornflowerblue;
+    font-style: normal;
+}
+
+.vermelho {
+    color: #ff0000;
+}
+
+@media (min-width: 1024px) {
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    .campos .campo label.file {
+        min-height: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

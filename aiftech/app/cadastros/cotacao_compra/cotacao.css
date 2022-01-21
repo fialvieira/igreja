@@ -1,0 +1,167 @@
+.campos textarea {
+    height: 6rem;
+    font-size: 14px;
+}
+
+#ctn_itens .campo > * {
+    display: flex;
+    flex-flow: column;
+}
+
+#ctn_itens .campo.erro {
+    text-align: left;
+}
+
+#ctn_itens label {
+    font-weight: normal;
+}
+
+div.margem-superior {
+    margin-top: 0.4rem;
+}
+
+.verde {
+    background-color: green;
+}
+
+.verde:active, .verde:hover {
+    background-color: darkgreen;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.vermelho:active, .vermelho:hover {
+    background-color: darkred;
+}
+
+#ctn_arquivos {
+    margin-bottom: 1rem;
+}
+
+.a_arquivo {
+    margin-top: 2px;
+    color: dimgray;
+    display: flex;
+    /*flex-flow: row nowrap;*/
+    flex-flow: column nowrap;
+}
+
+#ctn_arquivos .a_arquivo div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.campos #ctn_arquivos select {
+    width: 85%;
+    margin-left: auto;
+}
+
+.campos .campo a.acao {
+    margin-right: auto;
+}
+
+.campos .campo a:not(.acao) {
+    flex: 1 1 auto;
+    cursor: default;
+    align-self: center;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.excluido,
+.a_arquivo.oculto {
+    display: none;
+}
+
+.a_arquivo a:not(.acao) {
+    color: cornflowerblue;
+    font-style: normal;
+}
+
+
+@media (min-width: 768px) {
+    .campos textarea {
+        height: 25vh;
+        width: 50vw;
+    }
+
+    /*    #ctn_itens .campo > * {
+            display: inline-flex;
+            flex-flow: row-reverse;
+            flex-flow: row;
+        }
+    
+        #ctn_itens label {
+            flex: 1 0 auto;
+            font-weight: normal;
+        }*/
+    #ctn_itens table tbody select {
+        width: auto;
+    }
+
+    #ctn_itens table tbody input[type=text] {
+        width: 100px;
+    }
+
+    .campos .campo .controle a.acao {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 5px;
+    }
+
+
+    .campos .campo a:not(.acao) {
+        margin-left: 0;
+        padding-left: 0.5rem;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    #ctn_assuntos,
+    #ctn_participantes,
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    .mensagem {
+        align-self: center;
+    }
+
+    .campos .campo .controle a.acao {
+        height: 1.5rem;
+        width: 1.5rem;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    div.orcamento {
+        float: left;
+    }
+
+
+
+    #ctn_arquivos {
+        margin-bottom: 0.5rem;
+    }
+
+    .a_arquivo {
+        flex-flow: row nowrap;
+    }
+
+    .campos #ctn_arquivos select {
+        width: auto;
+        margin-left: 5px;
+    }
+
+    .campos .campo label.file {
+        min-height: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+
+}
