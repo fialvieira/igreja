@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/aiftech/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/phpoffice/phpword" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/setasign/fpdi" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/pclzip/pclzip" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/composer" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/mpdf/mpdf" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/aiftech/vendor/phpoffice/common" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+</project>

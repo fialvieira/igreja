@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phpoffice/phpspreadsheet" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phpoffice/phpword" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phenx/php-font-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phenx/php-svg-lib" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/dompdf/dompdf" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/zendframework/zend-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/sabberworm/php-css-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/zendframework/zend-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/pclzip/pclzip" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/mpdf/mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/aiftech/vendor/phpoffice/common" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
